@@ -2,26 +2,27 @@
 
 const url = "https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json";
 
-d3.json(url).then(function(data) {
+data = d3.json(url).then(function(data) {
     console.log(data);
+ 
 });
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//Create a horizontal bar chart with a dropdown menu to display the top 10 OTUs found in that individual
+// //Create a horizontal bar chart with a dropdown menu to display the top 10 OTUs found in that individual
 
-// Use sample_values as the values for the bar chart.
-const values = data.sample_values
-// Use otu_ids as the labels for the bar chart.
-const labels = data.otu_ids
-// Use otu_labels as the hovertext for the chart.
-const hovertext = data.otu_labels
+// // Use sample_values as the values for the bar chart.
+// const values = data.sample_values
+// // // Use otu_ids as the labels for the bar chart.
+// const labels = data.otu_ids
+// // Use otu_labels as the hovertext for the chart.
+// const hovertext = data.otu_labels
 
-// Plotly.newPlot("Bar", data);
+// // Plotly.newPlot("Bar", data);
 
-const svg = d3.select('bar')
-    .append('svg')
-    .attr('values', values)
-    .attr('labels', labels)
-    .attr('hovertext', hovertext);
+// const svg = d3.select('bar')
+//     .append('svg')
+//     .attr('values', values)
+//     .attr('labels', labels)
+//     .attr('hovertext', hovertext);
 
     //Create a bubble chart that displays each sample.
 
